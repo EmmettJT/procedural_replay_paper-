@@ -207,14 +207,13 @@ def return_binned_neuron_awake_sleep_rel(awake_dat,sleep_dat):
             min_neurons_filter = 0
             bins = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]    
 
-            if mouse in expert_mice:
-                for bin_ in bins:
-                    mask = np.round(awake,1) == bin_
-                    if len(sleep[mask]) > min_neurons_filter:
-                        if bin_ in awake_sleep_relationship:
-                            awake_sleep_relationship[bin_] += [np.mean(sleep[mask])]
-                        else:
-                            awake_sleep_relationship[bin_] = [np.mean(sleep[mask])]
+            for bin_ in bins:
+                mask = np.round(awake,1) == bin_
+                if len(sleep[mask]) > min_neurons_filter:
+                    if bin_ in awake_sleep_relationship:
+                        awake_sleep_relationship[bin_] += [np.mean(sleep[mask])]
+                    else:
+                        awake_sleep_relationship[bin_] = [np.mean(sleep[mask])]
 
     return awake_sleep_relationship
 
@@ -222,9 +221,9 @@ def plot_start_end_times(e_all_chunk_reverse_start_mean,e_all_chunk_forward_star
         
     ## plot forward start and ends
 
-    ax.plot(np.array(e_all_chunk_reverse_start_mean),np.ones(len(e_all_chunk_reverse_start_mean))*0.3,'o', color = red, alpha = 0.5,markeredgewidth = 0, markersize = 9)
+    ax.plot(np.array(e_all_chunk_reverse_start_mean),np.ones(len(e_all_chunk_reverse_start_mean))*0.3,'o', color = 'red', alpha = 0.5,markeredgewidth = 0, markersize = 9)
 
-    ax.plot(np.array(e_all_chunk_reverse_end_mean),np.ones(len(e_all_chunk_reverse_end_mean))*0.7,'o', color = red, alpha = 0.5,markeredgewidth = 0, markersize = 9)
+    ax.plot(np.array(e_all_chunk_reverse_end_mean),np.ones(len(e_all_chunk_reverse_end_mean))*0.7,'o', color = 'red', alpha = 0.5,markeredgewidth = 0, markersize = 9)
 
 
     groups =  ['starts'] * len(e_all_chunk_reverse_start_mean) + (['ends'] * len(e_all_chunk_reverse_end_mean)) 
@@ -243,9 +242,9 @@ def plot_start_end_times(e_all_chunk_reverse_start_mean,e_all_chunk_forward_star
 
     ###########
 
-    ax2.plot(np.array(e_all_chunk_forward_start_mean),np.ones(len(e_all_chunk_forward_start_mean))*0.3,'o', color = red, alpha = 0.5,markeredgewidth = 0, markersize = 9)
+    ax2.plot(np.array(e_all_chunk_forward_start_mean),np.ones(len(e_all_chunk_forward_start_mean))*0.3,'o', color = 'red', alpha = 0.5,markeredgewidth = 0, markersize = 9)
 
-    ax2.plot(np.array(e_all_chunk_forward_end_mean),np.ones(len(e_all_chunk_forward_end_mean))*0.7,'o', color = red, alpha = 0.5,markeredgewidth = 0, markersize = 9)
+    ax2.plot(np.array(e_all_chunk_forward_end_mean),np.ones(len(e_all_chunk_forward_end_mean))*0.7,'o', color = 'red', alpha = 0.5,markeredgewidth = 0, markersize = 9)
 
 
     groups =  ['starts'] * len(e_all_chunk_forward_start_mean) + (['ends'] * len(e_all_chunk_forward_end_mean)) 
