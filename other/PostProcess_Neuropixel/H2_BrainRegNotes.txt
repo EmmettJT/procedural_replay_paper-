@@ -1,0 +1,11 @@
+brainreg notes:
+
+conda activate cellfinder
+
+
+brainreg -input -output -params -extrachannel 
+add -d red/channel/directory to make it align this stack to the atalas aligned stack
+
+
+
+brainreg Z:\projects\sequence_squad\data\histology\Neuropixel_tracks\EJT238_TRN_NP\brainsaw\stitchedImages_100\2 Z:\projects\sequence_squad\data\histology\Neuropixel_tracks\EJT238_TRN_NP\brainreg -v 10.0 2.278 2.278 -d Z:\projects\sequence_squad\data\histology\Neuropixel_tracks\EJT238_TRN_NP\brainsaw\stitchedImages_100\3 --orientation psl 

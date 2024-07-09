@@ -1,0 +1,11 @@
+conda activate cellfinder
+
+napari 
+
+brainreg segment 
+
+load in atlas space
+
+trace tracks 
+
+save out all files etc. 

@@ -1,0 +1,21 @@
+## run jupyter script to generate shell scripts fr each trakcing model:
+
+
+ssh emmettt@ssh.swc.ucl.ac.uk -o "ServerAliveInterval 120"
+ssh hpc-gw1
+
+srun -p gpu --gres=gpu:1 -n 10 -t 2-22:00 --pty --mem=30G bash
+
+
+module load miniconda
+module load cuda/11.6
+
+conda activate DEEPLABCUT 
+
+cd /nfs/winstor/sjones/projects/sequence_squad/data/video_data/dlc/hpc_analysis/hpc_to_analyse/Tracking_SH_files
+
+./Above.sh
+
+./Back.sh
+
+./Side.sh
