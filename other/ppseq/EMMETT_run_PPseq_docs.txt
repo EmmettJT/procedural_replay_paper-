@@ -1,15 +1,5 @@
-ssh emmettt@ssh.swc.ucl.ac.uk -o "ServerAliveInterval 180"
 
-ssh hpc-gw1
-
-module load miniconda 
-
-conda activate replay 
-
-cd code/Replay
-
-
-####la
+####
 to generate prepared data files:
 
 on local machine in open jupyter notebook 'prepare_data'. 
@@ -31,17 +21,11 @@ git branch
 (git checkout .    - to update it)
 (make sure you are on the sacred seqs branch and all is up to date) 
 
-(will ask for username: EmmettJT and password - this is a key that github makes 
-at the moment it is as follows (but it will expire)
-
-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
-
 then run the slurm file 
 sbatch xxxxx.slurm
 
 
 to run a single instance
-
 
 srun -p cpu -t 2-22:00 -c 10 --pty --mem=30G bash
 
