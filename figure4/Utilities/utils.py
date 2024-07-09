@@ -59,31 +59,6 @@ def replace_repeats_with_string(numbers):
     return result
 
 
-def bin_data(x, y, n_bins):
-   # Create bins for y values
-    bin_edges = np.linspace(0, 1, n_bins)
-    
-    # Calculate bin centers
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
-    
-    # Assign each data point to the closest bin
-    bin_indices = np.argmin(np.abs(np.subtract.outer(y, bin_centers)), axis=1)
-    
-    # Initialize arrays to store binned data
-    binned_x = [[] for _ in range(n_bins)]
-    
-    # Populate binned arrays
-    for i in range(len(y)):
-        bin_idx = bin_indices[i]
-        binned_x[bin_idx].append(x[i])
-    
-    # Calculate mean and SEM for each bin
-    bin_means = np.array([np.mean(b) for b in binned_x])
-    bin_sems = np.array([np.std(b) for b in binned_x])
-    
-    return bin_means, bin_sems,bin_edges,binned_x
-
-
 def find_closest_example(numbers, examples):
     # Initialize dictionaries to store the closest example and example totals
     closest_examples = {}
@@ -118,6 +93,32 @@ def relative_warp_values(e_f_warp_factors):
     for item in e_f_warp_factors:
         rels += [list(np.array(item)/sum(item))]
     return rels
+
+
+
+def bin_data(x, y, n_bins):
+   # Create bins for y values
+    bin_edges = np.linspace(0, 1, n_bins)
+    
+    # Calculate bin centers
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+    
+    # Assign each data point to the closest bin
+    bin_indices = np.argmin(np.abs(np.subtract.outer(y, bin_centers)), axis=1)
+    
+    # Initialize arrays to store binned data
+    binned_x = [[] for _ in range(n_bins)]
+    
+    # Populate binned arrays
+    for i in range(len(y)):
+        bin_idx = bin_indices[i]
+        binned_x[bin_idx].append(x[i])
+    
+    # Calculate mean and SEM for each bin
+    bin_means = np.array([np.mean(b) for b in binned_x])
+    bin_sems = np.array([np.std(b) for b in binned_x])
+    
+    return bin_means, bin_sems,bin_edges,binned_x
 
     
 def plot_warps(e_f_warp_factors,e_r_warp_factors,ax,var_str,bins_):
@@ -195,6 +196,30 @@ def calculate_probabilities(rate_per_second, event_length_s):
     percentages = {k: (probability / total_probability) * 100 for k, probability in results.items()}
     
     return rate_per_0p3_seconds, results, percentages
+
+def bin_position_data(x, y, n_bins):
+   # Create bins for y values
+    bin_edges = np.linspace(0, 1, n_bins)
+    
+    # Calculate bin centers
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+    
+    # Assign each data point to the closest bin
+    bin_indices = np.argmin(np.abs(np.subtract.outer(y, bin_centers)), axis=1)
+    
+    # Initialize arrays to store binned data
+    binned_x = [[] for _ in range(n_bins)]
+    
+    # Populate binned arrays
+    for i in range(len(y)):
+        bin_idx = bin_indices[i]
+        binned_x[bin_idx].append(x[i])
+    
+    # Calculate mean and SEM for each bin
+    bin_means = np.array([np.mean(b) for b in binned_x])
+    bin_sems = np.array([np.std(b) for b in binned_x])
+    
+    return bin_means, bin_sems,bin_edges,binned_x
 
 def return_binned_neuron_awake_sleep_rel(awake_dat,sleep_dat):
     awake_sleep_relationship = {}
