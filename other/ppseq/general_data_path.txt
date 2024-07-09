@@ -1,0 +1,12 @@
+make a recording (ephys, behaviour and cameras)
+transfer this data onto ceph
+kilosort the spikes
+run the video tracking on the camera 
+align the behavior and cameras to the ephys (code for these steps in "Postprocess_Neuropixel")
+put all of these processed data together into a specific file structure (animalid_implant_recording/recordingdate/...)
+extract spikes which will be used for ppseq
+run ppseq on awake
+extract sleep spikes for ppseq
+run ppseq on sleep
+run my PPseq postprocessing scripts to extract replays
+analyse the replay
