@@ -41,7 +41,7 @@ Download the data file from [this link](#) and move it to the same parent direct
 
 ## Usage
 Reproducing the Main Figures
-To reproduce the main figures from the publication, run the tidied notebook scripts in the scripts directory. Each script corresponds to a specific figure in the paper.
+To reproduce the main figures and statistics from the publication, run the tidied notebook scripts in the scripts directory. Each script corresponds to a specific figure in the paper.
 
 ## Preprocessing
 For those interested in the preprocessing and analysis steps, the 'other' directory contains scripts containing preprocessing and untidied analysis. These scripts were used to prepare the data for the main analysis but are not very user firendly.
