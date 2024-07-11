@@ -2,7 +2,7 @@
 
 This repository contains the code and data necessary to reproduce the figures from our publication: [Replay of Procedural Experience is Independent of the Hippocampus](https://www.biorxiv.org/content/10.1101/2024.06.05.597547v1.full.pdf).
 
-(images/image.jpg)
+(images/replay_exmaple.png)
 
 ## Overview
 
