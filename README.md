@@ -27,7 +27,7 @@ Ensure you have the following software installed:
 
 2. **Download the data file:**
 
-Download the data file from [this link](#) and move it to the same parent directory as the cloned folder (do not place the data file inside the cloned repo).
+Download the data file from [[this link](https://figshare.com/s/35340aa23920ba25c5a8)], unzip the data and move it to the same parent directory as the cloned folder (do not place the data file inside the cloned repo).
 
 3. **Navigate to the cloned repository:**
 
