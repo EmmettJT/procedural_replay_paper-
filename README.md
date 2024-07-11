@@ -15,7 +15,7 @@ This repository includes:
 
 Ensure you have the following software installed:
 - [Git](https://git-scm.com/)
-- [Python](https://www.python.org/downloads/)
+- [Python](https://www.python.org/downloads/)  (Version used: 3.8.16)
 - Necessary Python libraries (listed in `requirements.txt`) 
 
 ### Installation
@@ -23,7 +23,7 @@ Ensure you have the following software installed:
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/EmmettJT/procedural_replay_paper_2024.git)
 
 2. **Download the data file:**
 
