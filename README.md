@@ -44,7 +44,7 @@ Reproducing the Main Figures
 To reproduce the main figures and statistics from the publication, run the tidied notebook scripts in the scripts directory. Each script corresponds to a specific figure in the paper.
 
 ## Preprocessing
-For those interested in the preprocessing and analysis steps, the 'other' directory contains scripts containing preprocessing and untidied analysis. These scripts were used to prepare the data for the main analysis but are not very user firendly.
+For those interested in the preprocessing and analysis steps, the 'other' directory contains scripts containing preprocessing and untidied analysis. These scripts were used to prepare the data for the main analysis but are not very user firendly. Because of online storage space limitations a partial dataset is shared. The full extendend data set is available on request.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
